@@ -121,9 +121,14 @@ export async function renderBadgeCanvas(
 
   ctx.clearRect(0, 0, w, h);
 
+  const base = import.meta.env.BASE_URL || "/";
+
   // If card is flipped to backside, render id_back.webp
   if (isFlipped) {
-    const backImg = (await loadImage("/id_back.webp")) || (await loadImage("id_back.webp"));
+    const backImg =
+      (await loadImage(`${base}id_back.webp`)) ||
+      (await loadImage("id_back.webp")) ||
+      (await loadImage("/id_back.webp"));
     if (backImg) {
       ctx.drawImage(backImg, 0, 0, w, h);
     } else {
@@ -134,7 +139,10 @@ export async function renderBadgeCanvas(
   }
 
   // 1. Load and draw reference.png background template (Clean unfilled card template)
-  const templateImg = (await loadImage("/reference.png")) || (await loadImage("reference.png"));
+  const templateImg =
+    (await loadImage(`${base}reference.png`)) ||
+    (await loadImage("reference.png")) ||
+    (await loadImage("/reference.png"));
   if (templateImg) {
     ctx.drawImage(templateImg, 0, 0, w, h);
   } else {
