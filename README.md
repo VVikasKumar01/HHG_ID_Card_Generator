@@ -1,20 +1,93 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🌴 Hacker House Goa 2026 - Builder ID Card & Frame Generator 🌴
 
-# Run and deploy your AI Studio app
+> A web application for creating custom Builder ID Passes and PFP Frames for **Hacker House Goa 2026**.
 
-This contains everything you need to run your app locally.
+![Hacker House Goa Builder ID Card](public/reference_id_after.png)
 
-View your app in AI Studio: https://ai.studio/apps/84a331d6-8a71-42b7-b92f-fd9bf7a10d72
+---
 
-## Run Locally
+## ✨ Features
 
-**Prerequisites:**  Node.js
+- 🪪 **Official Builder ID Card**: Pixel-perfect canvas rendering based on official Hacker House Goa 2026 reference templates.
+- 🔄 **3D Card Flip Preview**: Interactive 3D flip card toggle to view the front badge and backside (`id_back.webp`).
+- 📸 **Photo Editing & Filters**: Upload custom photos with real-time circular portal clipping, pan, zoom, rotation, horizontal flip, and visual filters (Sunset, Cyberpunk, Black & White, Warm, Vivid).
+- 📇 **Custom Builder Details**: Customize your Name, Role, Builder Class, Lo-Fi Beats / Currently Shipping status, and unique Builder ID.
+- 📱 **Contacts Section**: Showcases your **𝕏 Handle** (with black 𝕏 branding), **GitHub Handle**, and **Phone Number** clearly on the badge.
+- 🤖 **AI Builder Title Generator**: Integrates with Google Gemini API to suggest creative builder titles and roles.
+- ⚡ **High-Res Download**: Export crisp, high-resolution PNG badges ready for print or digital sharing.
+- 🚀 **Automated GitHub Actions CI/CD**: Automatic build and deployment to GitHub Pages on push to `main`.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite, TailwindCSS
+- **Canvas Rendering**: HTML5 2D Canvas Engine
+- **Icons**: Lucide React
+- **Backend / API**: Express, Node.js, `@google/genai` (Gemini API)
+- **CI/CD**: GitHub Actions, GitHub Pages
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/VVikasKumar01/HHG_ID_Card_Generator.git
+   cd HHG_ID_Card_Generator
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables** (Optional for AI Title Generation):
+   Create a `.env` or `.env.local` file in the root directory:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   PORT=3000
+   ```
+
+4. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📦 Build & Deployment
+
+### Local Production Build
+
+```bash
+npm run build
+```
+
+### GitHub Actions Deployment to GitHub Pages
+
+This repository includes a pre-configured GitHub Actions workflow in `.github/workflows/deploy.yml`.
+
+To deploy:
+1. Go to repository **Settings** → **Pages**.
+2. Under **Source**, select **GitHub Actions**.
+3. Push changes to the `main` branch:
+   ```bash
+   git add .
+   git commit -m "Update project"
+   git push origin main
+   ```
+
+---
+
+## 📄 License
+
+MIT License © 2026 Hacker House Goa Builder Community.
