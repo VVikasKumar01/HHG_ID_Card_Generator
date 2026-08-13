@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.agents/
+.claude/
+.codex/
+agent/
+bun.lock
+skills-lock.json

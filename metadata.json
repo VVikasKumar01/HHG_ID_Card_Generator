@@ -1,0 +1,6 @@
+{
+  "name": "HH Goa 2026 Frame Generator",
+  "description": "Profile Picture Frame & Builder ID Card Generator for Hacker House Goa 2026 by 2:47pm Studio.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

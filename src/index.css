@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --color-emerald-dark: #083421;
+  --color-emerald-base: #025938;
+  --color-emerald-palm: #0d5235;
+  --color-gold-accent: #ffd200;
+  --color-gold-hover: #ffe033;
+  --color-pink-accent: #ff007a;
+  --color-pink-hover: #ff2b93;
+  --color-sand-card: #fffdf2;
+  --color-sand-bg: #f8f3e8;
+  --color-charcoal-border: #111827;
+  
+  --font-pixel: 'Silkscreen', 'Courier New', monospace;
+  --font-serif-hero: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+  --font-devanagari: 'Yatra One', 'Rozha One', cursive, sans-serif;
+  --font-mono-retro: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-emerald-palm);
+    color: #fffdf5;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Universal focus outline for accessibility */
+  :focus-visible {
+    outline: 3px solid var(--color-pink-accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.font-hero-serif {
+  font-family: var(--font-serif-hero);
+}
+
+.font-devanagari {
+  font-family: var(--font-devanagari);
+}
+
+.font-mono-retro {
+  font-family: var(--font-mono-retro);
+}
+
+/* Woven Ribbon Border Pattern for Header APPLY button */
+.woven-ribbon-border {
+  position: relative;
+}
+
+.woven-ribbon-border::before,
+.woven-ribbon-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff007a 0px,
+    #ff007a 6px,
+    #025938 6px,
+    #025938 12px,
+    #ffd200 12px,
+    #ffd200 18px,
+    #000000 18px,
+    #000000 24px
+  );
+}
+
+.woven-ribbon-border::before {
+  top: 0;
+}
+
+.woven-ribbon-border::after {
+  bottom: 0;
+}
+
+/* Retro Neo-Brutalist Cards & Buttons */
+.hh-card-sand {
+  background-color: var(--color-sand-card);
+  color: var(--color-charcoal-border);
+  border: 3px solid var(--color-emerald-dark);
+  box-shadow: 4px 4px 0px var(--color-emerald-dark);
+}
+
+.hh-btn-yellow {
+  background-color: var(--color-gold-accent);
+  color: var(--color-charcoal-border);
+  border: 2px solid var(--color-charcoal-border);
+  font-weight: 800;
+  box-shadow: 2px 2px 0px var(--color-charcoal-border);
+  transition: all 0.15s ease;
+}
+
+.hh-btn-yellow:hover {
+  background-color: var(--color-gold-hover);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--color-charcoal-border);
+}
+
+.hh-btn-yellow:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--color-charcoal-border);
+}
+
+.hh-btn-pink {
+  background-color: var(--color-pink-accent);
+  color: #ffffff;
+  border: 2px solid var(--color-charcoal-border);
+  font-weight: 800;
+  box-shadow: 2px 2px 0px var(--color-charcoal-border);
+  transition: all 0.15s ease;
+}
+
+.hh-btn-pink:hover {
+  background-color: var(--color-pink-hover);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--color-charcoal-border);
+}
+
+.hh-btn-pink:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--color-charcoal-border);
+}
+
+/* Palm Green Gradient backdrop */
+.bg-palm-green {
+  background-color: var(--color-emerald-palm);
+  background-image: radial-gradient(circle at 50% 0%, #156d47 0%, var(--color-emerald-palm) 70%);
+}
+
+/* Smooth custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
