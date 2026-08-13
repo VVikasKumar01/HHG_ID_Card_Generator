@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/HHG_ID_Card_Generator/',
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
